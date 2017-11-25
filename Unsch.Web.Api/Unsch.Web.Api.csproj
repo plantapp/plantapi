@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\plantappunsch - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\UnschWebApi20171124101207 - Web Deploy.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Database\" />
+    <Folder Include="Imagen\Temp\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.0-preview1-25914-04" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Unsch.Imagen.Procesador\Unsch.Imagen.Procesador.csproj" />
+  </ItemGroup>
+
+</Project>
