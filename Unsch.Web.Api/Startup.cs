@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Unsch.Web.Api.Repository;
-using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json.Serialization;
+using Swashbuckle.AspNetCore.Swagger;
 using Unsch.Web.Api.Helper;
-using System.Net;
-using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http;
+using Unsch.Web.Api.Repository;
 
 namespace Unsch.Web.Api
 {
@@ -35,6 +27,22 @@ namespace Unsch.Web.Api
             services.AddMvc(config => { config.Filters.Add(typeof(CustomExceptionFilter)); });
             services.AddScoped<IPlantaRepository, PlantaRepository>();
             services.AddScoped<IUsuariosRepository, UsuariosRepository>();
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new Info { Title = "Plantas Procesor", Version = "v1" });
+            //});
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "Api Procesador de Hojas de Plantas",
+                    Description = "Es un aplicación para procesar las imagenes de las hojas de plantas y verificar si ya existe en en nuestra base de datos",
+                    TermsOfService = "None",
+                    Contact = new Contact { Name = "Unsch - Ingenieria de Sistemas", Email = "", Url = "http://www.unsch.edu.pe" },
+                    License = new License { Name = "Apache License 2.0", Url = "http://www.apache.org/licenses" }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +57,14 @@ namespace Unsch.Web.Api
                 app.UseDatabaseErrorPage();
             }           
             app.UseStaticFiles();
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Plantas");
+            });
             app.UseMvc();
         }
     }

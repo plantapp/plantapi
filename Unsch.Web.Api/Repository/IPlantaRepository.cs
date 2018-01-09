@@ -10,5 +10,6 @@ namespace Unsch.Web.Api.Repository
         List<SearchInfo> fGetFiles();
         PlantaEntity create(PlantaEntity model);
         PlantaEntity findPlanta(string id);
+        List<PlantaInfo> ListarRegistros(string id);
     }
 }

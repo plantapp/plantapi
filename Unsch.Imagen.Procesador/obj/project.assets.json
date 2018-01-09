@@ -718,7 +718,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Users\\Alex Pariona\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -727,24 +727,22 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\DOCUMENTOS SISTEMAS APP\\Alex Pariona\\Software\\PlantApi\\Unsch.Imagen.Procesador\\Unsch.Imagen.Procesador.csproj",
+      "projectUniqueName": "F:\\Proyectos\\Repositorio\\plantapi\\Unsch.Imagen.Procesador\\Unsch.Imagen.Procesador.csproj",
       "projectName": "Unsch.Imagen.Procesador",
-      "projectPath": "D:\\DOCUMENTOS SISTEMAS APP\\Alex Pariona\\Software\\PlantApi\\Unsch.Imagen.Procesador\\Unsch.Imagen.Procesador.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\DOCUMENTOS SISTEMAS APP\\Alex Pariona\\Software\\PlantApi\\Unsch.Imagen.Procesador\\obj\\",
+      "projectPath": "F:\\Proyectos\\Repositorio\\plantapi\\Unsch.Imagen.Procesador\\Unsch.Imagen.Procesador.csproj",
+      "packagesPath": "C:\\Users\\Alex Pariona\\.nuget\\packages\\",
+      "outputPath": "F:\\Proyectos\\Repositorio\\plantapi\\Unsch.Imagen.Procesador\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Alex Pariona\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -764,12 +762,12 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           },
           "System.Drawing.Common": {
             "target": "Package",
-            "version": "4.5.0-preview1-25914-04"
+            "version": "[4.5.0-preview1-25914-04, )"
           }
         },
         "imports": [

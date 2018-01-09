@@ -20,7 +20,7 @@ namespace Unsch.Web.Api.Helper
             Errormsg = ex.GetType().Name.ToString();
             extype = ex.GetType().ToString();
             ErrorLocation = ex.Message.ToString();
-            string InnerException = ex.InnerException.ToString();
+            string InnerException = ex.InnerException == null ? "" : ex.InnerException.Message;
 
             try
             {
@@ -29,7 +29,7 @@ namespace Unsch.Web.Api.Helper
                 {
                     Directory.CreateDirectory(filepath);
                 }
-                filepath = filepath + DateTime.Today.ToString("dd-MM-yy") + ".txt";   //Text File Name
+                filepath = Path.Combine(filepath, "Log_" + DateTime.Today.ToString("dd-MM-yy") + ".txt"); 
                 if (!File.Exists(filepath))
                 {
                     File.Create(filepath).Dispose();
@@ -64,7 +64,7 @@ namespace Unsch.Web.Api.Helper
                 {
                     Directory.CreateDirectory(filepath);
                 }
-                filepath = Path.Combine(filepath, DateTime.Today.ToString("dd-MM-yy") + ".txt");   //Text File Name
+                filepath = Path.Combine(filepath, "LogData_" + DateTime.Today.ToString("dd-MM-yy") + ".txt");   //Text File Name
                 if (!File.Exists(filepath))
                 {
                     File.Create(filepath).Dispose();

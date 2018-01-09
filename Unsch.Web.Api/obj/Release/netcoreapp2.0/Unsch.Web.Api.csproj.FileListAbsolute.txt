@@ -11,3 +11,16 @@ D:\DOCUMENTOS SISTEMAS APP\Alex Pariona\Software\PlantApi\Unsch.Web.Api\obj\Rele
 D:\DOCUMENTOS SISTEMAS APP\Alex Pariona\Software\PlantApi\Unsch.Web.Api\obj\Release\netcoreapp2.0\Unsch.Web.Api.AssemblyInfo.cs
 D:\DOCUMENTOS SISTEMAS APP\Alex Pariona\Software\PlantApi\Unsch.Web.Api\obj\Release\netcoreapp2.0\Unsch.Web.Api.dll
 D:\DOCUMENTOS SISTEMAS APP\Alex Pariona\Software\PlantApi\Unsch.Web.Api\obj\Release\netcoreapp2.0\Unsch.Web.Api.pdb
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\bin\Release\netcoreapp2.0\Unsch.Web.Api.deps.json
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\bin\Release\netcoreapp2.0\Unsch.Web.Api.runtimeconfig.json
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\bin\Release\netcoreapp2.0\Unsch.Web.Api.runtimeconfig.dev.json
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\bin\Release\netcoreapp2.0\Unsch.Web.Api.dll
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\bin\Release\netcoreapp2.0\Unsch.Web.Api.pdb
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\bin\Release\netcoreapp2.0\Unsch.Imagen.Procesador.dll
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\bin\Release\netcoreapp2.0\Unsch.Imagen.Procesador.pdb
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\obj\Release\netcoreapp2.0\Unsch.Web.Api.csprojResolveAssemblyReference.cache
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\obj\Release\netcoreapp2.0\Unsch.Web.Api.csproj.CoreCompileInputs.cache
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\obj\Release\netcoreapp2.0\Unsch.Web.Api.AssemblyInfoInputs.cache
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\obj\Release\netcoreapp2.0\Unsch.Web.Api.AssemblyInfo.cs
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\obj\Release\netcoreapp2.0\Unsch.Web.Api.dll
+F:\Proyectos\Repositorio\plantapi\Unsch.Web.Api\obj\Release\netcoreapp2.0\Unsch.Web.Api.pdb

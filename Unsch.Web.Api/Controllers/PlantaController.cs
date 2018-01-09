@@ -1,10 +1,7 @@
-﻿using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using Unsch.Web.Api.Helper;
 using Unsch.Web.Api.Model;
 using Unsch.Web.Api.Provider;
@@ -29,7 +26,7 @@ namespace Unsch.Web.Api.Controllers
         public IActionResult Validate([FromBody] PlantaValidator rep)
         {
             try
-            {               
+            {
                 string Guid = System.Guid.NewGuid().ToString();
                 List<SearchInfo> files = _planta.fGetFiles();
                 rep.ImageName = Guid;
@@ -37,7 +34,7 @@ namespace Unsch.Web.Api.Controllers
                 if (files.Count > 0)
                 {
                     SearchInfo oSearchModel = PlantaProvider.fSearch(rep.Image, files);
-                    if (oSearchModel != null && oSearchModel.Porcentaje < 20)
+                    if (oSearchModel != null && oSearchModel.Porcentaje < 15)
                     {
                         var omodel = _planta.findPlanta(oSearchModel.Id);
                         rep.Id = omodel.Id;
@@ -110,6 +107,21 @@ namespace Unsch.Web.Api.Controllers
                 throw new PlantaException(ex.Message, ex.InnerException);
             }
         }
+        [HttpGet("registros/{id}")]
+        public IActionResult getRegistros(string id) {
+            try
+            {
+                List<PlantaInfo> result = _planta.ListarRegistros(id);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                ExceptionLogging.SendErrorToText(ex, _env);
+                throw new PlantaException(ex.Message, ex.InnerException);
+            }
+        }
+
+
         [HttpPost("signup")]
         public IActionResult Signup([FromBody] UsuarioEntity rep)
         {
